@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEL-30 – Artykuł: Nowa dostawa świeżych ryb</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f7f9;
+        color: #333;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+        background-color: #0077b6;
+        color: white;
+        flex: 0 0 auto;
+        padding: 20px 0;
+    }
+    header h1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        letter-spacing: 90em;
+    }
+    .header-content {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .logo {display: flex; align-items: center; gap: 10px;}
+    .logo img {width: 60px; height: 60px;}
+    .logo h1 {font-size: 2em; letter-spacing: 2px;}
+    .logo-ue {flex: 1 1 200px; display: flex; justify-content: center; align-items: center;}
+    nav {display: flex; gap: 20px; flex-wrap: wrap;}
+    nav a {color: white; font-weight: bold; transition: 0.3s;}
+    nav a:hover {color: #ffd700;}
+
+    /* Hero / tytuł artykułu */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* czarny filtr o 50% przezroczystości */
+        z-index: 1;
+    }   
+    .hero {
+        background: url('przetarg.jpg') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        flex: 0 0 auto;
+        min-height: 30vh; /* zmniejszona wysokość z 50vh na 30vh */
+        padding: 20px 20px;
+        position: relative;
+    }
+    .hero h2 {
+        position: relative;
+        z-index: 2;
+        font-size: 2em; /* większy i bardziej wyraźny */
+        margin: 0;
+    }
+
+    /* Główna zawartość artykułu */
+    .article-container {
+        flex: 1 0 auto;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .article-container h1 {
+        color: #0077b6;
+        margin-bottom: 20px;
+    }
+    .article-container p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    /* Footer */
+    footer {
+        flex: 0 0 auto;
+        background: #023e8a;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    footer a {color: #ffd700;}
+
+    /* Responsywność */
+    @media(max-width:768px){
+        .hero h2 {font-size: 1.8em;}
+        .article-container {padding: 15px;}
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <a href="index.html" style="text-decoration:none; color:inherit;">
+        <div class="header-content">
+            <div class="logo">
+                <img src="anchor.png" alt="Logo HEL-30">
+                <h1>HEL-30</h1>
+            </div>
+        </a>
+
+        <div class="logo-ue">
+            <img src="ue-logos.png" alt="Loga Unii Europejskiej" style="height:80px;">
+        </div>
+
+        <nav>
+            <a href="index.html">O nas</a>
+            <a href="index.html#aktualnosci">Aktualności</a>
+            <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Ogłoszenie o przetargu</h2>
+</section>
+
+<div class="article-container">
+    <h2 style="color:#0077b6; text-align:center;">Ogłoszenie o przetargu</h2>
+    <p>Zarząd <strong>[nazwa inwestora]</strong> ogłasza przetarg na budowę domu jednorodzinnego przy ul. <strong>[adres]</strong>, w miejscowości <strong>[miasto]</strong>.</p>
+    
+    <p><strong>Zakres prac:</strong></p>
+    <ul>
+        <li>Fundamenty i konstrukcja budynku</li>
+        <li>Dach, okna i drzwi zewnętrzne</li>
+        <li>Instalacje: elektryczna, wodno-kanalizacyjna, ogrzewanie, wentylacja</li>
+        <li>Prace wykończeniowe zgodnie z projektem budowlanym</li>
+    </ul>
+
+    <p><strong>Wymagania dla wykonawców:</strong> uprawnienia budowlane, doświadczenie w podobnych realizacjach, gwarancja jakości i terminowości.</p>
+
+    <p><strong>Termin składania ofert:</strong> do dnia <strong>[data]</strong>, godz. <strong>[godzina]</strong></p>
+    <p><strong>Miejsce składania ofert:</strong> <strong>[adres lub e-mail]</strong></p>
+
+    <p>Kontakt: <strong>[Imię i nazwisko]</strong>, tel.: <strong>[numer telefonu]</strong>, e-mail: <strong>[adres e-mail]</strong></p>
+
+    <p style="font-size:0.9em; color:#555;">Zastrzegamy sobie prawo do odwołania lub unieważnienia przetargu bez podania przyczyny.</p>
+</div>
+
+<footer>
+    &copy; 2025 HEL-30 – Wszystkie prawa zastrzeżone.
+</footer>
+
+</body>
+</html>

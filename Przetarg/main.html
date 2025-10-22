@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEL 30 - Przemysław Rotta</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background: url("port.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 119, 182, 0.85);
+            color: white;
+            padding: 20px;
+            flex: 0 0 auto;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center; /* wyrównanie w pionie */
+            justify-content: center; /* wyśrodkowanie w poziomie */
+            gap: 15px; /* odstęp między logo a tekstem */
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.4));
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        .header-text h2 {
+            margin: 5px 0 0 0;
+            font-weight: normal;
+            font-size: 1.5em;
+        }
+
+        .ship-photo {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-top: 3px solid white;
+        }
+
+        main {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .ogloszenia-container {
+            background-color: rgba(255, 255, 255, 1);
+            border: 2px dashed #0077b6;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .ogloszenia-header {
+            background-color: #e0f0fb;
+            color: #0077b6;
+            font-size: 1.5em;
+            padding: 10px;
+            text-align: center;
+            flex: 0 0 auto;
+        }
+
+        .ogloszenia-list {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(224, 224, 224, 0.9);
+            flex: 0 0 auto;
+        }
+
+        /* scrollbar */
+        .ogloszenia-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        .ogloszenia-list::-webkit-scrollbar-thumb {
+            background-color: #0077b6;
+            border-radius: 4px;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="anchor.png" alt="Logo z kotwicą" class="logo">
+            <div class="header-text">
+                <h1>HEL 30</h1>
+                <h2>Przemysław Rotta</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="ogloszenia-container">
+            <div class="ogloszenia-header">Ogłoszenia kutra HEL 30</div>
+            <div class="ogloszenia-list">
+                Tutaj będą zamieszczane ogłoszenia kutra HEL 30.
+            </div>
+            <p style="text-align:right; font-size:0.9em; color:#555;">
+                Ogłoszenie opublikowano: 22.10.2025 r.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 HEL 30 – Przemysław Rotta <br>
+        Kontakt: <a href="mailto:x">x</a> | tel. x
+    </footer>
+
+</body>
+</html>
