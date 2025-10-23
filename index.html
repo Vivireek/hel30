@@ -36,54 +36,59 @@
         letter-spacing: 30em;
     }
     .header-content {
-        width: 100%;
-        max-width: 1400px;
-        margin: 0 auto;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: wrap;           /* pozwala zawartości zawijać się przy bardzo małych ekranach */
+        justify-content: center;   /* wyśrodkowanie poziome wszystkich elementów */
+        align-items: center;       /* wyśrodkowanie w pionie */
+        gap: 30px;                 /* odstępy między logo, logami UE i menu */
         padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
     .logo-ue img {
-    max-width: 100%;
-    height: auto;
-    max-height: 70px;
-    content: url("ue-logos.png");
-}
+        max-width: 100%;
+        height: auto;
+        max-height: 70px;
+        content: url("ue-logos.png");
+    }
+    .logo, .logo-ue, nav {
+        display: flex;
+        align-items: center;       /* wyrównanie elementów wewnątrz każdego bloku */
+    }
+    nav {
+        gap: 20px;                 /* odstęp między linkami */
+    }
+
+
 
 /* Naprawa wyświetlania na telefonach */
 @media (max-width: 600px) {
     .header-content {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;       /* w razie potrzeby zawija elementy, ale nadal wyśrodkowane */
         justify-content: center;
-        text-align: center;
-        overflow-x: hidden; /* usuwa możliwość przesuwania */
-        width: 100%;
+        align-items: center;
     }
 
     .logo-ue {
-        flex-basis: auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: auto;
         margin: 10px 0;
-        overflow: hidden; /* zabezpiecza przed wystawaniem */
+        display: flex;
+        justify-content: center;       /* wyśrodkowanie UE */
+        align-items: center;
     }
 
-    .logo-ue img {
-        max-width: 85vw; /* dopasowanie do szerokości ekranu */
+   .logo-ue img {
+        max-width: 90vw;       /* dopasowanie log UE do szerokości ekranu telefonu */
         height: auto;
         display: block;
-        margin: 0 auto;
+    }
+    nav {
+        flex-wrap: wrap;       /* pozwala linkom w razie potrzeby przejść do następnej linii */
+        justify-content: center;
     }
 
-    body, html {
-        overflow-x: hidden; /* całkowicie usuwa poziomy scroll */
-    }
 }
+
     .logo {display: flex; align-items: center; gap: 10px;}
     .logo img {width: 60px; height: 60px;}
     .logo h1 {font-size: 2em; letter-spacing: 2px;}
