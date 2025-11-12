@@ -218,6 +218,36 @@
         .hero h2 {font-size: 1.8em;}
         .tab-buttons button {flex: 1; margin-bottom: 10px;}
     }
+    .download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.download-item {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+.download-item:hover {
+    background: #e0f4ff;
+}
+.download-item a {
+    background: #0077b6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.download-item a:hover {
+    background: #0096c7;
+}
+
 </style>
 </head>
 <body>
@@ -241,6 +271,7 @@
             <nav>
                 <a href="#" onclick="openTab('onas')">O nas</a>
                 <a href="#" onclick="openTab('aktualnosci')">Aktualności</a>
+                <a href="#" onclick="openTab('pobrania')">Do pobrania</a>
                 <a href="#" onclick="openTab('kontakt')">Kontakt</a>
             </nav>
         </div>
@@ -254,6 +285,7 @@
     <div class="tab-buttons">
         <button class="active" onclick="openTab('onas')">O nas</button>
         <button onclick="openTab('aktualnosci')">Aktualności</button>
+        <button onclick="openTab('pobrania')">Do pobrania</button>
         <button onclick="openTab('kontakt')">Kontakt</button>
     </div>
 
@@ -268,22 +300,38 @@
     <div id="aktualnosci" class="tab-content">
         <h2>Aktualności</h2>
         <div class="cards">
-            <a href="article1.html" style="text-decoration:none; color:inherit;">
+            <!--<a href="article1.html" style="text-decoration:none; color:inherit;">
                 <div class="card"><h3>Ogłoszenie o przetargu</h3><p>Zarząd [nazwa inwestora] ogłasza przetarg na budowę domu jednorodzinnego przy ul. [adres], w miejscowości [miasto].</p></div>
             </a>
             <a href="article2.html" style="text-decoration:none; color:inherit;">
                 <div class="card"><h3>XXX</h3><p>XXX</p></div>
-            </a>
+            </a> -->
         </div>
     </div>
 
     <div id="kontakt" class="tab-content">
         <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:hel30@example.com">MAIL</a></p>
-        <p>Telefon: NUMER</p>
-        <p>Adres: ADRES</p>
+        <p>Email: <a href="mailto:rotta256@wp.pl">rotta256@wp.pl</a></p>
+        <p>Telefon: 608-242-644</p>
+    </div>
+    <div id="pobrania" class="tab-content">
+    <h2>Do pobrania</h2>
+    <p>Poniżej znajdziesz dokumenty do pobrania:</p>
+
+    <div class="download-list">
+        <div class="download-item">
+            <span>XXX</span>
+            <a href="XXX.txt" download>Pobierz</a>
+        </div>
+        <div class="download-item">
+            <span>YYY</span>
+            <a href="YYY" download>Pobierz</a>
+        </div>
     </div>
 </div>
+</div>
+
+
 
 <footer>
     &copy; 2025 HEL-30 – Wszystkie prawa zastrzeżone.
